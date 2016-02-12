@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Theme Colors">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="link_colors"
+            android:summaryOn="Main colors can be set separately"
+            android:summaryOff="Color primary dark is set based on primary color"
+            android:title="Independent Main Colors" />
+        <com.wubydax.custommaterialtheme.prefs.ColorPickerPreference
+            android:key="primary_color"
+            android:title="Primary Color"
+            android:defaultValue="#3F51B5"/>
+        <com.wubydax.custommaterialtheme.prefs.ColorPickerPreference
+            android:key="primary_color_dark"
+            android:title="Primary Color Dark"
+            android:defaultValue="#303F9F"
+            android:dependency="link_colors"/>
+        <com.wubydax.custommaterialtheme.prefs.ColorPickerPreference
+            android:key="accent_color"
+            android:title="Accent Color"
+            android:defaultValue="#FF4081"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
